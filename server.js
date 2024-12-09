@@ -7,7 +7,7 @@ const passportlocalmongoose = require("passport-local-mongoose")
 const mongoose = require("mongoose")
 
 const app = express()
-const port = 4000 ;
+const port = process.env.PORT || 4000 ;
 app.set("view engine","ejs")
 app.use(bodyparser.urlencoded({extended:true}))
 app.use(methodoverride("_method"))
